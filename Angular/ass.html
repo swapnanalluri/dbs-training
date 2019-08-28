@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+         <div id='write_here'></div>
+
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+        <br>
+        <br>
+            
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+          
+        <br>
+        <br>
+
+        <button type="submit" onclick="validate()">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+    <br>
+    <br>
+   
+</body>
+
+<script>
+    function validate()
+    {
+       if(document.getElementById("uname").value==document.getElementById("password").value) {
+        
+        document.getElementById('write_here').innerHTML="Login Successful";
+       }
+       else {
+        document.getElementById('write_here').innerHTML="Login UnSuccessful";
+       }
+    }
+
+    function myFunction() {
+        document.getElementById("container").reset();
+    }
+    </script>
+
+</html>

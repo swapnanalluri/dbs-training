@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <p><strong>Enter details of customer</strong></p>
+  
+  <form ng-submit="formSubmit()" class="form">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="number" class="form-control" ng-model="Custid" placeholder="enter customer id" required=""/>
+      </div> 
+
+      <br>
+
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="account_number" placeholder="enter account number" required=""/>
+      </div>
+
+      <br>
+      
+      <div class="form-group">
+          <a class="nav-link" 
+          [routerLink]="['/emphome']" 
+          routerLinkActive="router-link-active" ><button type="submit" class="btn btn-primary btn-lg" >Delete Acccount</button></a>      
+        <span class="text-danger" style="color:red">{{ error }}</span>
+      </div>
+
+    </div>
+  </form>
+</div>

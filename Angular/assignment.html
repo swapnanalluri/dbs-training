@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/asstyle.css">
+</head>
+<body>
+    <h1> Todo List</h1>
+    <div id="myDIV" class="header">
+
+        <label id="user"><b>Id</b></label>
+        <input type="text" placeholder="Enter Id" name="userid" id="userid" required><br><br>
+    
+        <label id="tasks"><b>Task</b></label>
+        <input type="text" placeholder="Enter Task" name="task" id="task" required><br><br>
+
+        <label id="desc"><b>Description</b></label>
+            <input type="text" placeholder="Enter Description" name="des"  id="des" required><br><br>
+    
+        <button onclick="newElement()" class="addBtn">Submit</button>
+      </div>
+      <div id="write_here"></div>
+
+      <ul id="myUL">
+        </ul>
+</body>
+
+<script>
+  // Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+  
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("userid").value;
+    var taskValue = document.getElementById("task").value;
+    var desValue = document.getElementById("des").value;
+    var t = document.createTextNode(inputValue);
+    var t1 = document.createTextNode(taskValue);
+    var t2 = document.createTextNode(desValue);
+    li.appendChild(t);
+    li.appendChild(t1);
+    li.appendChild(t2);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li+" ");
+    }
+    document.getElementById("userid").value = "";
+    document.getElementById("task").value = "";
+    document.getElementById("des").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+
+
+</html>

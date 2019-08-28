@@ -1,0 +1,30 @@
+<div>
+  <h1> Welcome to Geeks Banking Services</h1>
+</div>
+<br>
+<ng-sidebar-container style="height: 100vh;">
+  <!-- class="text-center" -->
+  <div ng-sidebar-content >
+		<button (click)="_toggleSidebar()" >Quick Links</button>
+  </div>
+  <br><br>
+	<!-- A sidebar -->
+	<ng-sidebar [(opened)]="_opened" position="left">
+		<a class="nav-link" 
+          [routerLink]="['/register']" 
+          routerLinkActive="router-link-active" >Account Summary</a>    
+          
+          <a class="nav-link" 
+          [routerLink]="['/register']" 
+          routerLinkActive="router-link-active" >Profile</a>  
+
+          <a class="nav-link" 
+          [routerLink]="['/deleteaccount']" 
+          routerLinkActive="router-link-active" >Transfer</a>     
+
+
+	</ng-sidebar>
+
+	<!-- Page content -->
+</ng-sidebar-container>
+

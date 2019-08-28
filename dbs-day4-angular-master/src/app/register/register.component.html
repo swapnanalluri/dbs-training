@@ -1,0 +1,46 @@
+<form ngForm #form = "ngForm" 
+(ngSubmit)="handleFormData(form)">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+            type="text" 
+            ngModel 
+            required
+            minlength="5"
+            maxlength="8"
+            #customerName="ngModel"
+            name="name"
+            class="form-control" 
+            id="name" 
+            aria-describedby="name" 
+            placeholder="Enter your name">
+      </div>
+      <div class="alert alert-danger" *ngIf="customerName.touched && customerName.invalid">
+          <span *ngIf="customerName.errors.required">Name field is required</span>
+          <span *ngIf="customerName.errors.minlength">
+            Name field is required -
+             {{customerName.errors.minlength.requiredLength - customerName.errors.minlength.actualLength}}</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            name="email"
+            required 
+            ngModel 
+            #email = "ngModel"
+            id="email" placeholder="Enter you email">
+      </div>
+      <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+          <span>Email address is mandatory</span>
+      </div>
+      <button 
+            type="submit" 
+            [disabled]="form.invalid"
+            class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

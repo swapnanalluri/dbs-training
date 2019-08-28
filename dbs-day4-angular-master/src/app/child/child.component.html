@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" *ngFor="let col of columns">{{col}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of inputData">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.salary}}</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+<button class="btn btn-primary" (click)="btnClicked()">Child Component</button>

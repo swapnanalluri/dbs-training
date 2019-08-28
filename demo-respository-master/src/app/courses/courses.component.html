@@ -1,0 +1,28 @@
+<div class="row">
+    <input [(ngModel)]="coursename" 
+           type="text" 
+           (change)="onCourseNameChange()"
+           name="coursename" 
+           id="coursename">
+
+    <br/>
+    <br/>
+    <h2>{{coursename}}</h2>
+    <i class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i>
+    <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i>
+  </div>
+    <div class="row">  <ng-container *ngIf="courses.length > 0; 
+                       else noCourses">
+      <div class="row">
+          <div class="col-md-4" 
+                *ngFor="let course of courses">
+            
+                <app-course everyCourse="course"></app-course>
+
+          </div>
+        </div>
+  </ng-container>
+  <ng-template #noCourses>
+    <h2>No courses to Display !!</h2>
+  </ng-template>
+</div>

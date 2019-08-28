@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="clerk" class="com.practice.practicecode.Clerk"
+		scope="prototype"></bean>
+	<bean id="programmer" class="com.practice.practicecode.Programmer"
+		scope="prototype"></bean>
+	<bean id="manager" class="com.practice.practicecode.Manager"
+		scope="prototype"></bean>
+</beans>

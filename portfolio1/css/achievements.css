@@ -1,0 +1,43 @@
+body {
+		background-image:url("cerback1.jpeg");
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		color: #0000cc;
+		font-size:30px;
+		font-family:Segoe Print;
+	}
+	.image img{
+		float:left;
+		padding:20px;
+		height:50%;
+		width:45%;
+	} 
+	
+	.image1 p {
+		float:left;
+		padding:20px;
+	}
+	.image1 img {
+		float:right;
+		height:50%;
+		width:45%;
+	}
+	.image3 img{
+		float:left;
+		padding:20px;
+		height:50%;
+		width:45%;
+	} 
+	.image3 p {
+		padding:20px;
+	}
+	.image4 p {
+		float:left;
+		padding-left:80px;
+	}
+	.image4 img {
+		float:right;
+		height:50%;
+		width:45%;
+	}
+	

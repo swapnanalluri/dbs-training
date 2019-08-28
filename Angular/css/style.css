@@ -1,0 +1,32 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+ul>li {
+    list-style: none;
+    background-color: royalblue;
+    margin: 10px;
+    padding: 20px;
+    color:whitesmoke;
+}
+
+div>p {
+    color: red;
+}
+
+h1 {
+    color: gray;
+}
+
+.container {
+    background-color: yellowgreen;
+    width: 400px;
+    height: 400px;
+    margin-left: 400px;
+    border-radius: 50%;
+}
+.container>#wrapper>img {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+}

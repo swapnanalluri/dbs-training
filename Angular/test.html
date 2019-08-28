@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+    <h1>Places</h1>
+        <form>  
+                <select id="Places" onclick="myFunction()">
+                <option value=''></option>
+                  <option value="hyderabad">hyderabad</option>
+                  <option value="chennai">chennai</option>
+                  <option value="banglore">banglore</option>
+                  <option value="mumbai">mumbai</option>
+                </select>
+              </form>      
+              <button id="bang" disabled>banglore</button>       
+              <button id="chennai" disabled>chennai</button>  
+              <button id="mumbai" disabled>mumbai</button>  
+              <button id="hyderabad" disabled>hyderabad</button>    
+              <p id="demo"></p>
+
+</center>
+              
+<script>
+        function myFunction() {
+          var x = document.getElementById("Places").value;
+         
+          if(x=='banglore') {
+            document.getElementById("bang").disabled = false;
+            document.getElementById("chennai").disabled = true;
+            document.getElementById("mumbai").disabled = true;
+            document.getElementById("hyderabad").disabled = true;
+          }
+          if(x=='chennai') {
+            document.getElementById("chennai").disabled = false;
+            document.getElementById("bang").disabled = true;
+            document.getElementById("mumbai").disabled = true;
+            document.getElementById("hyderabad").disabled = true;
+          }
+          if(x=='mumbai') {
+            document.getElementById("mumbai").disabled = false;
+            document.getElementById("chennai").disabled = true;
+            document.getElementById("bang").disabled = true;
+            document.getElementById("hyderabad").disabled = true;
+          }
+          if(x=='hyderabad') {
+            document.getElementById("hyderabad").disabled = false;
+            document.getElementById("mumbai").disabled = true;
+            document.getElementById("chennai").disabled = true;
+            document.getElementById("bang").disabled = true;
+          }
+        }
+        </script>
+
+</body>
+</html>

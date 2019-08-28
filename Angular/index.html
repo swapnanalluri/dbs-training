@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Worrld</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat suscipit placeat perspiciatis repellendus facere, eos sapiente hic quaerat facilis minus error enim labore atque earum delectus. Natus quos dignissimos nulla.
+        </p>
+    </div>
+    <ul>
+            <li>Angular</li>
+            <li>React</li>
+            <li>Node</li>
+            <li>Java</li>
+    </ul>
+    <div class="container">
+        <div id="wrapper">
+            <p></p>
+            <p></p>
+            <p></p>
+            <img src="images/teddy.jpg"/>
+            
+        </div>
+    </div>
+
+    <div>
+        <button name="sumbit" id="submit">Submit</button>
+    </div>
+
+</body>
+
+<script>
+    var clickHandler = function(event) {
+        console.log(this);
+        console.log('click is working........')
+    }
+
+    document.querySelector("#submit").addEventListener('click',clickHandler)
+    document.querySelector("#container").addEventListener('click',clickHandler)
+</script>
+</html>

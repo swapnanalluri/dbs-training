@@ -1,0 +1,28 @@
+
+<ng-sidebar-container style="height: 100vh;">
+  <!-- class="text-center" -->
+  <div ng-sidebar-content >
+		<button (click)="_toggleSidebar()" >Actions</button>
+  </div>
+  <br><br>
+	<!-- A sidebar -->
+	<ng-sidebar [(opened)]="_opened" position="left">
+		<a class="nav-link" 
+          [routerLink]="['/register']" 
+          routerLinkActive="router-link-active" >Create customer</a>    
+          
+          <a class="nav-link" 
+          [routerLink]="['/register']" 
+          routerLinkActive="router-link-active" >Update customer</a>  
+
+          <a class="nav-link" 
+          [routerLink]="['/deleteaccount']" 
+          routerLinkActive="router-link-active" >Delete Account</a>     
+
+
+	</ng-sidebar>
+
+	<!-- Page content -->
+	
+
+</ng-sidebar-container>
